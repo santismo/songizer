@@ -28,6 +28,34 @@ The release uses ad-hoc signed bundles. If macOS blocks a bundle, reopen the ins
 
 Detailed component placement is in [the suite contents guide](docs/SUITE-CONTENTS.md).
 
+## Plug-in interfaces
+
+These are captures of the current, real plug-in interfaces. Repeatizer remains a separate AUv3 download; the other four pictured tools are included in the Songizer components-only installer.
+
+### Repeatizer — separate AUv3 download
+
+![Repeatizer interface](docs/images/plugins/repeatizer-ui.png)
+
+### Chordizer
+
+![Chordizer interface](docs/images/plugins/chordizer-ui.png)
+
+### Voicizer
+
+![Voicizer interface](docs/images/plugins/voicizer-ui.png)
+
+### Fretizer
+
+![Fretizer interface](docs/images/plugins/fretizer-ui.png)
+
+### Midizer
+
+![Midizer interface](docs/images/plugins/midizer-ui.png)
+
+### Visualizer Studio — in development
+
+Visualizer Studio is still being updated, so it intentionally has no screenshot here yet. The current component is included in the Songizer installer; its interface image will be added when that work is ready to show.
+
 ## Ways to make music with the suite
 
 ### Play a motif; make it answer itself
