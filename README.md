@@ -6,21 +6,20 @@ Songizer Suite is a collection of Logic Pro music tools for developing ideas by 
 
 ## One download, six plug-ins for musical decisions
 
-Download **`Songizer-Suite-1.0.0-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, then double-click **Install Songizer Suite.command**. It installs Chordizer, Voicizer, Fretizer, Midizer, and Visualizer Studio into your user Components folder, plus Repeatizer's AUv3 container app into `~/Applications`; existing copies are backed up first.
+Download **`Songizer-Suite-1.0.0-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, then double-click **Install Songizer Suite.command**. It installs and registers all six Songizer plug-ins for Logic Pro; existing copies are backed up first.
 
 1. Quit Logic Pro before running the installer.
 2. Open the DMG and double-click **Install Songizer Suite.command**.
 3. Restart Logic Pro when it finishes.
-4. If Logic does not list Repeatizer immediately, open `~/Applications/Repeatizer.app` once, then restart Logic Pro.
-5. In **Logic Pro > Settings > Plug-in Manager**, enable any component that Logic has disabled.
+4. In **Logic Pro > Settings > Plug-in Manager**, enable any component that Logic has disabled.
 
-The release uses ad-hoc signed bundles. If macOS blocks a bundle, reopen the installer from Finder and follow its confirmation prompt. The installer also removes quarantine attributes from the installed copies. Repeatizer is an AUv3 MIDI FX: macOS requires its small `Repeatizer.app` container to register the plug-in, and the Songizer installer now includes it automatically.
+The release uses ad-hoc signed bundles. If macOS blocks a bundle, reopen the installer from Finder and follow its confirmation prompt. The installer also removes quarantine attributes from the installed copies.
 
 ## Included tools
 
 | Tool | Version | What it contributes | Where it lives |
 | --- | --- | --- | --- |
-| [Repeatizer](https://github.com/santismo/repeatizer) | 1.10.1 | Repeat, swing, and pattern treatment for a phrase you play. | AUv3 MIDI FX (included in the DMG) |
+| [Repeatizer](https://github.com/santismo/repeatizer) | 1.10.1 | Repeat, swing, and pattern treatment for a phrase you play. | MIDI FX (included in the DMG) |
 | [Chordizer](https://github.com/santismo/chordizer) | 0.5.0 | Chord awareness, editable chord regions, and Scalizer/Harmonizer-style harmonic options. | MIDI FX / Audio FX |
 | [Voicizer](https://github.com/santismo/LeadVoicer) | 1.1.0 | Voice-led chords and tempo-aware chord performances from your MIDI. | MIDI FX |
 | [Fretizer](https://github.com/santismo/fretizer) | 1.2.0 | A display-only guitar map that keeps your MIDI byte-for-byte unchanged. | MIDI FX |
@@ -31,11 +30,11 @@ Detailed component placement is in [the suite contents guide](docs/SUITE-CONTENT
 
 ## Plug-in interfaces
 
-These are captures of the current, real plug-in interfaces. All six tools are included in the Songizer installer; Repeatizer's AUv3 MIDI FX is registered through its included app container.
+These are current interfaces for the Songizer tools.
 
-### Repeatizer — included AUv3 MIDI FX
+### Repeatizer
 
-The Repeatizer editor capture is being refreshed. The prior standalone-app/desktop capture was removed because it was not the actual MIDI FX interface.
+![Repeatizer interface](docs/images/plugins/repeatizer-ui.png)
 
 ### Chordizer
 

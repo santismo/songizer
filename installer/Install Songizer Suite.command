@@ -3,7 +3,7 @@ set -euo pipefail
 
 suite_dir="$(cd "$(dirname "$0")" && pwd)"
 components_dir="$HOME/Library/Audio/Plug-Ins/Components"
-applications_dir="$HOME/Applications"
+repeatizer_container_dir="$HOME/Library/Application Support/Songizer Suite/AUv3"
 backup_root="$HOME/Library/Application Support/Songizer Suite/Backups/$(date +%Y%m%d-%H%M%S)"
 
 components=(
@@ -39,23 +39,24 @@ for component in "${components[@]}"; do
   /usr/bin/xattr -dr com.apple.quarantine "$destination_bundle" 2>/dev/null || true
 done
 
-repeatizer_source="$suite_dir/Applications/Repeatizer.app"
-repeatizer_destination="$applications_dir/Repeatizer.app"
+repeatizer_source="$suite_dir/.installer/Repeatizer.app"
+repeatizer_destination="$repeatizer_container_dir/Repeatizer.app"
 
 if [[ ! -d "$repeatizer_source" ]]; then
-  print -u2 "Missing bundled app container: Repeatizer.app"
+  print -u2 "Missing bundled Repeatizer support files"
   exit 1
 fi
 
-mkdir -p "$applications_dir"
+mkdir -p "$repeatizer_container_dir"
 if [[ -e "$repeatizer_destination" ]]; then
-  mkdir -p "$backup_root/Applications"
-  mv "$repeatizer_destination" "$backup_root/Applications/Repeatizer.app"
+  mkdir -p "$backup_root/AUv3"
+  mv "$repeatizer_destination" "$backup_root/AUv3/Repeatizer.app"
 fi
 
 /usr/bin/ditto "$repeatizer_source" "$repeatizer_destination"
 /usr/bin/xattr -dr com.apple.quarantine "$repeatizer_destination" 2>/dev/null || true
+/usr/bin/pluginkit -a "$repeatizer_destination" 2>/dev/null || true
 
 print "Songizer Suite installed."
-print "Restart Logic Pro. If Repeatizer is not listed immediately, open ~/Applications/Repeatizer.app once, then restart Logic Pro."
+print "Restart Logic Pro, then enable the installed plug-ins in Plug-in Manager if needed."
 print "Previous bundles, when present, were backed up to: $backup_root"
