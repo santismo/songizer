@@ -6,7 +6,7 @@ Songizer Suite is a collection of Logic Pro music tools for developing ideas by 
 
 ## One download, six plug-ins for musical decisions
 
-Download **`Songizer-Suite-1.0.0-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, then double-click **Install Songizer Suite.command**. It installs and registers all six Songizer plug-ins for Logic Pro; existing copies are backed up first.
+Download **`Songizer-Suite-1.1.0-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, then double-click **Install Songizer Suite.command**. It installs and registers all six Songizer plug-ins for Logic Pro; existing copies are backed up first.
 
 1. Quit Logic Pro before running the installer.
 2. Open the DMG and double-click **Install Songizer Suite.command**.
@@ -24,7 +24,7 @@ The release uses ad-hoc signed bundles. If macOS blocks a bundle, reopen the ins
 | [Voicizer](https://github.com/santismo/LeadVoicer) | 1.1.0 | Voice-led chords and tempo-aware chord performances from your MIDI. | MIDI FX |
 | [Fretizer](https://github.com/santismo/fretizer) | 1.2.0 | A display-only guitar map that keeps your MIDI byte-for-byte unchanged. | MIDI FX |
 | [Midizer](https://github.com/santismo/midizer) | 1.1.0 | Timing-aware capture and drag-out of the performance that actually reached the end of a MIDI FX chain. | MIDI FX |
-| [Visualizer Studio](https://github.com/santismo/visualizer-studio) | 0.6.0 | Master, audio-source, and MIDI-source views in one component bundle. | Audio FX / MIDI FX |
+| [Visualizer Studio](https://github.com/santismo/visualizer-studio) | 1.0.3 | Source-native waveform and piano-roll views in one component bundle. | Audio FX / MIDI FX |
 
 Detailed component placement is in [the suite contents guide](docs/SUITE-CONTENTS.md).
 
@@ -54,7 +54,7 @@ These are current interfaces for the Songizer tools.
 
 ### Visualizer Studio — in development
 
-Visualizer Studio is still being updated, so it intentionally has no screenshot here yet. The current component is included in the Songizer installer; its interface image will be added when that work is ready to show.
+Visualizer Studio 1.0.3 adds source-native waveform and MIDI piano-roll visuals with focused source controls. It remains under active development, so it intentionally has no screenshot here yet; the current component is included in the Songizer installer.
 
 ## Ways to make music with the suite
 

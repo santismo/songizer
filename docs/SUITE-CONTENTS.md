@@ -7,6 +7,6 @@
 | Voicizer | 1.1.0 | MIDI FX | Decide how one played line becomes a voiced chord or performance. |
 | Fretizer | 1.2.0 | MIDI FX | See playable guitar positions and detected chord information while preserving MIDI unchanged. |
 | Midizer | 1.1.0 | MIDI FX | Capture the result of a chain and drag the played performance into a Logic track. |
-| Visualizer Studio | 0.6.0 | Audio FX / MIDI FX | Watch master, track, and MIDI activity through its three bundled Audio Units. |
+| Visualizer Studio | 1.0.3 | Audio FX / MIDI FX | Watch source-native waveforms and MIDI piano rolls through its three bundled Audio Units. |
 
 Each tool can be used on its own. The suite is most useful when a musician supplies the musical material, then chooses which part of the chain should listen, elaborate, display, or commit it.
