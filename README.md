@@ -6,7 +6,7 @@ Songizer Suite is a collection of Logic Pro music tools for developing ideas by 
 
 ## One download, six plug-ins for musical decisions
 
-Download **`Songizer-Suite-1.1.0-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, then double-click **Install Songizer Suite.command**. It installs and registers all six Songizer plug-ins for Logic Pro; existing copies are backed up first.
+Download **`Songizer-Suite-1.1.1-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, then double-click **Install Songizer Suite.command**. It installs and registers all six Songizer plug-ins for Logic Pro; existing copies are backed up first.
 
 1. Quit Logic Pro before running the installer.
 2. Open the DMG and double-click **Install Songizer Suite.command**.
@@ -19,7 +19,7 @@ The release uses ad-hoc signed bundles. If macOS blocks a bundle, reopen the ins
 
 | Tool | Version | What it contributes | Where it lives |
 | --- | --- | --- | --- |
-| [Repeatizer](https://github.com/santismo/repeatizer) | 1.14.0 | Repeat, swing, chord patterns, and arpeggiation for a phrase you play. | MIDI FX (included in the DMG) |
+| [Repeatizer](https://github.com/santismo/repeatizer) | 1.14.0 | Repeat, swing, chord patterns, and arpeggiation for a phrase you play. | MIDI FX |
 | [Chordizer](https://github.com/santismo/chordizer) | 0.5.0 | Chord awareness, editable chord regions, and Scalizer/Harmonizer-style harmonic options. | MIDI FX / Audio FX |
 | [Voicizer](https://github.com/santismo/LeadVoicer) | 1.1.0 | Voice-led chords and tempo-aware chord performances from your MIDI. | MIDI FX |
 | [Fretizer](https://github.com/santismo/fretizer) | 1.2.0 | A display-only guitar map that keeps your MIDI byte-for-byte unchanged. | MIDI FX |
@@ -35,6 +35,8 @@ These are current interfaces for the Songizer tools.
 ### Repeatizer
 
 ![Repeatizer interface](docs/images/plugins/repeatizer-ui.png)
+
+Repeatizer can be played as a drum performance surface or in **Instrument** mode. Instrument mode turns held notes into timed repeats, chord patterns, or arpeggios, with style, pattern, octave spread, variation, dynamics, and timing controls.
 
 ### Chordizer
 
