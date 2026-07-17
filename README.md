@@ -19,7 +19,7 @@ The release uses ad-hoc signed bundles. If macOS blocks a bundle, reopen the ins
 
 | Tool | Version | What it contributes | Where it lives |
 | --- | --- | --- | --- |
-| [Repeatizer](https://github.com/santismo/repeatizer) | 1.10.1 | Repeat, swing, and pattern treatment for a phrase you play. | MIDI FX (included in the DMG) |
+| [Repeatizer](https://github.com/santismo/repeatizer) | 1.14.0 | Repeat, swing, chord patterns, and arpeggiation for a phrase you play. | MIDI FX (included in the DMG) |
 | [Chordizer](https://github.com/santismo/chordizer) | 0.5.0 | Chord awareness, editable chord regions, and Scalizer/Harmonizer-style harmonic options. | MIDI FX / Audio FX |
 | [Voicizer](https://github.com/santismo/LeadVoicer) | 1.1.0 | Voice-led chords and tempo-aware chord performances from your MIDI. | MIDI FX |
 | [Fretizer](https://github.com/santismo/fretizer) | 1.2.0 | A display-only guitar map that keeps your MIDI byte-for-byte unchanged. | MIDI FX |
