@@ -3,21 +3,41 @@ set -euo pipefail
 
 suite_dir="$(cd "$(dirname "$0")" && pwd)"
 components_dir="$HOME/Library/Audio/Plug-Ins/Components"
-repeatizer_container_dir="$HOME/Library/Application Support/Songizer Suite/AUv3"
-backup_root="$HOME/Library/Application Support/Songizer Suite/Backups/$(date +%Y%m%d-%H%M%S)"
+archive_root="$HOME/Library/Application Support/Songizer/Development Archive/$(date +%Y%m%d-%H%M%S)"
 
 components=(
   "Chordizer.component"
-  "Voicizer.component"
   "Fretizer.component"
-  "Midizer.component"
-  "Visualizer Studio.component"
+  "Repeatizer.component"
+  "Visualizer.component"
+  "Voicizer.component"
 )
 
-legacy_midicap="$components_dir/MidiCap.component"
-if [[ -e "$legacy_midicap" ]]; then
-  mkdir -p "$backup_root/Plug-Ins"
-  mv "$legacy_midicap" "$backup_root/Plug-Ins/MidiCap.component"
+families=(Chordizer Fretizer Repeatizer Visualizer Voicizer)
+archived_count=0
+
+mkdir -p "$components_dir"
+for installed_bundle in "$components_dir"/*.component(N); do
+  bundle_name="${installed_bundle:t}"
+  for family in "${families[@]}"; do
+    if [[ "$bundle_name" == "$family"* ]]; then
+      mkdir -p "$archive_root/Components"
+      archive_name="$bundle_name"
+      if [[ -e "$archive_root/Components/$archive_name" ]]; then
+        archive_name="${bundle_name:r}-previous-${archived_count}.component"
+      fi
+      mv "$installed_bundle" "$archive_root/Components/$archive_name"
+      archived_count=$((archived_count + 1))
+      break
+    fi
+  done
+done
+
+old_container="$HOME/Library/Application Support/Songizer Suite/AUv3"
+if [[ -d "$old_container" ]]; then
+  mkdir -p "$archive_root/Application Support"
+  mv "$old_container" "$archive_root/Application Support/AUv3"
+  archived_count=$((archived_count + 1))
 fi
 
 for component in "${components[@]}"; do
@@ -29,34 +49,19 @@ for component in "${components[@]}"; do
     exit 1
   fi
 
-  mkdir -p "$components_dir"
-  if [[ -e "$destination_bundle" ]]; then
-    mkdir -p "$backup_root/Plug-Ins"
-    mv "$destination_bundle" "$backup_root/Plug-Ins/$component"
-  fi
-
   /usr/bin/ditto "$source_bundle" "$destination_bundle"
   /usr/bin/xattr -dr com.apple.quarantine "$destination_bundle" 2>/dev/null || true
+  /usr/bin/codesign --verify --deep --strict "$destination_bundle"
 done
 
-repeatizer_source="$suite_dir/.installer/Repeatizer.app"
-repeatizer_destination="$repeatizer_container_dir/Repeatizer.app"
+/usr/bin/killall -9 AudioComponentRegistrar 2>/dev/null || true
 
-if [[ ! -d "$repeatizer_source" ]]; then
-  print -u2 "Missing bundled Repeatizer support files"
-  exit 1
+print "Songizer Suite 2.0.0 installed:"
+for component in "${components[@]}"; do
+  print "  ${component:r}"
+done
+if (( archived_count > 0 )); then
+  print "Previous and development copies were preserved at:"
+  print "  $archive_root"
 fi
-
-mkdir -p "$repeatizer_container_dir"
-if [[ -e "$repeatizer_destination" ]]; then
-  mkdir -p "$backup_root/AUv3"
-  mv "$repeatizer_destination" "$backup_root/AUv3/Repeatizer.app"
-fi
-
-/usr/bin/ditto "$repeatizer_source" "$repeatizer_destination"
-/usr/bin/xattr -dr com.apple.quarantine "$repeatizer_destination" 2>/dev/null || true
-/usr/bin/pluginkit -a "$repeatizer_destination" 2>/dev/null || true
-
-print "Songizer Suite installed."
-print "Restart Logic Pro, then enable the installed plug-ins in Plug-in Manager if needed."
-print "Previous bundles, when present, were backed up to: $backup_root"
+print "Restart Logic Pro before opening the plug-ins."
