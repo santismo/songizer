@@ -1,27 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="490" viewBox="0 0 1200 490" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
   <title id="title">Songizer Suite workflow map</title>
-  <desc id="desc">Five Songizer Suite music tools connect a played MIDI idea to rhythmic phrasing, harmonic choices, guitar feedback, and audio or MIDI visualization.</desc>
+  <desc id="desc">A suggested Logic Pro MIDI effects chain runs from a played idea through Chordizer, Voicizer, and Repeatizer, then through Midizer in the final capture position before the instrument. Fretizer monitors MIDI without changing it, while Visualizer receives MIDI and audio taps.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#251847"/></linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#58d9ff"/><stop offset="1" stop-color="#bc7cff"/></linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#000" flood-opacity=".28"/></filter>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9z" fill="#9bb7d8"/></marker>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#242424"/>
+      <stop offset="1" stop-color="#171717"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".42"/>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9z" fill="#a7a7a7"/>
+    </marker>
     <style>
-      .card { fill:#17243a; stroke:#415879; stroke-width:1.4; }
-      .title { fill:#f7fbff; font:700 22px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
-      .copy { fill:#b8c9df; font:15px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
-      .small { fill:#84a4cb; font:13px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; letter-spacing:1px; }
-      .line { stroke:#9bb7d8; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .card { fill:#303030; stroke:#525252; stroke-width:1.4; }
+      .name { fill:#f1f1f1; font:600 21px -apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif; }
+      .copy { fill:#bdbdbd; font:14px -apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif; }
+      .eyebrow { fill:#a8a8a8; font:600 12px -apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif; letter-spacing:1.4px; }
+      .flow { stroke:#a7a7a7; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .monitor { stroke:#787878; stroke-width:2; stroke-dasharray:7 6; fill:none; marker-end:url(#arrow); }
     </style>
   </defs>
-  <rect width="1200" height="490" rx="28" fill="url(#bg)"/>
-  <text x="55" y="58" fill="#f7fbff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="700">SONGIZER SUITE</text>
-  <text x="55" y="84" fill="#a9c2e1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Play, listen, choose, shape, capture, and see the music you make.</text>
-  <path class="line" d="M255 185 H335"/><path class="line" d="M505 185 H585"/><path class="line" d="M755 185 H835"/>
-  <path class="line" d="M155 315 V245"/>
-  <g filter="url(#shadow)"><rect class="card" x="55" y="125" width="200" height="120" rx="18"/><rect x="55" y="125" width="200" height="8" rx="4" fill="#ff9b52"/><text class="title" x="76" y="170">Repeatizer</text><text class="copy" x="76" y="198">Phrase a played idea</text><text class="copy" x="76" y="219">with repeat &amp; swing.</text></g>
-  <g filter="url(#shadow)"><rect class="card" x="335" y="125" width="170" height="120" rx="18"/><rect x="335" y="125" width="170" height="8" rx="4" fill="#7ba9ff"/><text class="title" x="356" y="170">Voicizer</text><text class="copy" x="356" y="198">Choose how a line</text><text class="copy" x="356" y="219">becomes harmony.</text></g>
-  <g filter="url(#shadow)"><rect class="card" x="585" y="125" width="170" height="120" rx="18"/><rect x="585" y="125" width="170" height="8" rx="4" fill="#55d3ae"/><text class="title" x="606" y="170">Chordizer</text><text class="copy" x="606" y="198">Hear chords, then</text><text class="copy" x="606" y="219">edit the story.</text></g>
-  <g filter="url(#shadow)"><rect class="card" x="835" y="125" width="300" height="120" rx="18"/><rect x="835" y="125" width="300" height="8" rx="4" fill="url(#accent)"/><text class="title" x="856" y="170">Fretizer + Visualizer</text><text class="copy" x="856" y="198">See playable notes, chord shapes,</text><text class="copy" x="856" y="219">motion, spectrum, and MIDI activity.</text></g>
-  <g filter="url(#shadow)"><rect class="card" x="55" y="315" width="200" height="115" rx="18"/><rect x="55" y="315" width="200" height="8" rx="4" fill="#f5d653"/><text class="title" x="76" y="360">Your instrument</text><text class="copy" x="76" y="388">The musical decision</text><text class="copy" x="76" y="409">always starts here.</text></g>
+
+  <rect width="1440" height="620" rx="24" fill="url(#background)"/>
+  <rect x="1" y="1" width="1438" height="618" rx="23" fill="none" stroke="#454545" stroke-width="2"/>
+  <circle cx="34" cy="31" r="6" fill="#ff5f57"/><circle cx="54" cy="31" r="6" fill="#febc2e"/><circle cx="74" cy="31" r="6" fill="#28c840"/>
+  <text x="105" y="39" fill="#ededed" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="22" font-weight="600">Songizer Suite</text>
+  <text x="105" y="65" fill="#9e9e9e" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="14">Suggested final-capture chain — the first three processors can be reordered or used independently.</text>
+
+  <text class="eyebrow" x="44" y="119">PERFORMANCE</text>
+  <path class="flow" d="M198 200 H235"/><path class="flow" d="M423 200 H460"/><path class="flow" d="M648 200 H685"/><path class="flow" d="M873 200 H910"/><path class="flow" d="M1098 200 H1135"/>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="40" y="145" width="158" height="110" rx="12"/>
+    <rect x="40" y="145" width="7" height="110" rx="3.5" fill="#ff9a35"/>
+    <text class="name" x="62" y="187">Played idea</text>
+    <text class="copy" x="62" y="216">Keys, pads, or MIDI</text>
+    <text class="copy" x="62" y="237">regions in Logic</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect class="card" x="235" y="145" width="188" height="110" rx="12"/>
+    <rect x="235" y="145" width="7" height="110" rx="3.5" fill="#4f8cff"/>
+    <text class="name" x="258" y="187">Chordizer</text>
+    <text class="copy" x="258" y="216">Scale, harmony, and</text>
+    <text class="copy" x="258" y="237">register mapping</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect class="card" x="460" y="145" width="188" height="110" rx="12"/>
+    <rect x="460" y="145" width="7" height="110" rx="3.5" fill="#a879ff"/>
+    <text class="name" x="483" y="187">Voicizer</text>
+    <text class="copy" x="483" y="216">Voicing styles and</text>
+    <text class="copy" x="483" y="237">weighted Chord Bank</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect class="card" x="685" y="145" width="188" height="110" rx="12"/>
+    <rect x="685" y="145" width="7" height="110" rx="3.5" fill="#ff5c55"/>
+    <text class="name" x="708" y="187">Repeatizer</text>
+    <text class="copy" x="708" y="216">Pads, Instrument mode,</text>
+    <text class="copy" x="708" y="237">rhythm, and swing</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect class="card" x="910" y="145" width="188" height="110" rx="12"/>
+    <rect x="910" y="145" width="7" height="110" rx="3.5" fill="#34c759"/>
+    <text class="name" x="933" y="187">Midizer</text>
+    <text class="copy" x="933" y="216">Last MIDI FX: capture</text>
+    <text class="copy" x="933" y="237">and export final notes</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect class="card" x="1135" y="145" width="260" height="110" rx="12"/>
+    <rect x="1135" y="145" width="7" height="110" rx="3.5" fill="#ff9a35"/>
+    <text class="name" x="1158" y="187">Software instrument</text>
+    <text class="copy" x="1158" y="216">Receives the complete</text>
+    <text class="copy" x="1158" y="237">processed performance</text>
+  </g>
+
+  <text class="eyebrow" x="44" y="343">MONITORING &amp; VISUALS</text>
+  <path class="monitor" d="M1004 255 V326 H392 V382"/>
+  <path class="monitor" d="M1265 255 V352 H1000 V382"/>
+  <path class="monitor" d="M580 437 H725"/>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="245" y="382" width="335" height="135" rx="12"/>
+    <rect x="245" y="382" width="7" height="135" rx="3.5" fill="#f2cc45"/>
+    <text class="name" x="272" y="426">Fretizer</text>
+    <text class="copy" x="272" y="456">Monitor playable guitar positions</text>
+    <text class="copy" x="272" y="479">without changing the MIDI stream.</text>
+    <text class="eyebrow" x="272" y="502">DISPLAY-ONLY MIDI FX</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect class="card" x="725" y="382" width="470" height="135" rx="12"/>
+    <rect x="725" y="382" width="7" height="135" rx="3.5" fill="#2f9bff"/>
+    <text class="name" x="752" y="426">Visualizer</text>
+    <text class="copy" x="752" y="456">MIDI and audio taps feed a resizable master view</text>
+    <text class="copy" x="752" y="479">with independent source controls, colors, and trails.</text>
+    <text class="eyebrow" x="752" y="502">MIDI SOURCE • AUDIO SOURCE • MASTER DISPLAY</text>
+  </g>
+
+  <text x="40" y="574" fill="#898989" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="13">Midizer belongs after note-changing MIDI effects when the goal is to record exactly what the instrument receives.</text>
 </svg>
