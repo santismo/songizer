@@ -2,11 +2,10 @@
 
 | Tool | Version | Logic Pro placement | Focus |
 | --- | --- | --- | --- |
-| Repeatizer | 1.14.0 | MIDI FX | Turn a performed seed into rhythmically shaped repeats, chord patterns, and arpeggios. |
-| Chordizer | 0.5.0 | MIDI FX / Audio FX | Notice, name, edit, and share chord movement; use Scalizer/Harmonizer features as choices, not prescriptions. |
-| Voicizer | 1.1.0 | MIDI FX | Decide how one played line becomes a voiced chord or performance. |
-| Fretizer | 1.2.0 | MIDI FX | See playable guitar positions and detected chord information while preserving MIDI unchanged. |
-| Midizer | 1.1.0 | MIDI FX | Capture the result of a chain and drag the played performance into a Logic track. |
-| Visualizer Studio | 1.1.3 | Audio FX / MIDI FX | Watch source-native waveforms and MIDI piano rolls across Logic execution contexts, with direct selection, precise transforms, and flexible MIDI history. |
+| Repeatizer | 2.0.0 | MIDI FX | Full pad and Instrument modes for repeats, chord patterns, arpeggios, swing, and tempo performance. |
+| Chordizer | 2.0.0 | MIDI FX | Chord regions, scale transformation, harmonization, and register-consistent output. |
+| Voicizer | 2.0.0 | MIDI FX | Scale-aware voicing and root-independent Chord Bank formulas applied by note role. |
+| Fretizer | 2.0.0 | MIDI FX | Guitar-position feedback while preserving MIDI unchanged. |
+| Visualizer | 2.0.0 | Audio FX / MIDI FX | Audio and MIDI sources with selectable per-source visuals, transforms, colors, trails, and history. |
 
-Each tool can be used on its own. The suite is most useful when a musician supplies the musical material, then chooses which part of the chain should listen, elaborate, display, or commit it.
+All five tools use the canonical dark Songizer interface introduced in version 2.0.0. Each tool can be used independently.

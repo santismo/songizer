@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="490" viewBox="0 0 1200 490" role="img" aria-labelledby="title desc">
   <title id="title">Songizer Suite workflow map</title>
-  <desc id="desc">Six Songizer Suite music tools connect a played MIDI idea to harmonic choices, phrasing, instrument feedback, capture, and visualization.</desc>
+  <desc id="desc">Five Songizer Suite music tools connect a played MIDI idea to rhythmic phrasing, harmonic choices, guitar feedback, and audio or MIDI visualization.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#251847"/></linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#58d9ff"/><stop offset="1" stop-color="#bc7cff"/></linearGradient>
@@ -18,11 +18,10 @@
   <text x="55" y="58" fill="#f7fbff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="30" font-weight="700">SONGIZER SUITE</text>
   <text x="55" y="84" fill="#a9c2e1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Play, listen, choose, shape, capture, and see the music you make.</text>
   <path class="line" d="M255 185 H335"/><path class="line" d="M505 185 H585"/><path class="line" d="M755 185 H835"/>
-  <path class="line" d="M920 260 V330 H615"/><path class="line" d="M335 370 H255"/>
+  <path class="line" d="M155 315 V245"/>
   <g filter="url(#shadow)"><rect class="card" x="55" y="125" width="200" height="120" rx="18"/><rect x="55" y="125" width="200" height="8" rx="4" fill="#ff9b52"/><text class="title" x="76" y="170">Repeatizer</text><text class="copy" x="76" y="198">Phrase a played idea</text><text class="copy" x="76" y="219">with repeat &amp; swing.</text></g>
   <g filter="url(#shadow)"><rect class="card" x="335" y="125" width="170" height="120" rx="18"/><rect x="335" y="125" width="170" height="8" rx="4" fill="#7ba9ff"/><text class="title" x="356" y="170">Voicizer</text><text class="copy" x="356" y="198">Choose how a line</text><text class="copy" x="356" y="219">becomes harmony.</text></g>
   <g filter="url(#shadow)"><rect class="card" x="585" y="125" width="170" height="120" rx="18"/><rect x="585" y="125" width="170" height="8" rx="4" fill="#55d3ae"/><text class="title" x="606" y="170">Chordizer</text><text class="copy" x="606" y="198">Hear chords, then</text><text class="copy" x="606" y="219">edit the story.</text></g>
   <g filter="url(#shadow)"><rect class="card" x="835" y="125" width="300" height="120" rx="18"/><rect x="835" y="125" width="300" height="8" rx="4" fill="url(#accent)"/><text class="title" x="856" y="170">Fretizer + Visualizer</text><text class="copy" x="856" y="198">See playable notes, chord shapes,</text><text class="copy" x="856" y="219">motion, spectrum, and MIDI activity.</text></g>
-  <g filter="url(#shadow)"><rect class="card" x="335" y="315" width="280" height="115" rx="18"/><rect x="335" y="315" width="280" height="8" rx="4" fill="#d57eff"/><text class="title" x="356" y="360">Midizer</text><text class="copy" x="356" y="388">Commit the performance you chose.</text><text class="small" x="356" y="412">DRAG MIDI INTO LOGIC</text></g>
   <g filter="url(#shadow)"><rect class="card" x="55" y="315" width="200" height="115" rx="18"/><rect x="55" y="315" width="200" height="8" rx="4" fill="#f5d653"/><text class="title" x="76" y="360">Your instrument</text><text class="copy" x="76" y="388">The musical decision</text><text class="copy" x="76" y="409">always starts here.</text></g>
 </svg>
