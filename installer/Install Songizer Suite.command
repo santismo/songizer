@@ -2,7 +2,7 @@
 set -euo pipefail
 
 suite_dir="$(cd "$(dirname "$0")" && pwd)"
-suite_version="2.0.1"
+suite_version="2.0.2"
 if [[ -f "$suite_dir/VERSION" ]]; then
   suite_version="$(tr -d '\n' < "$suite_dir/VERSION")"
 fi

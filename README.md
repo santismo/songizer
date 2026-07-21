@@ -1,12 +1,12 @@
 # Songizer Suite
 
-Songizer Suite is a unified set of six Logic Pro music tools for shaping, understanding, capturing, and visualizing performances. Version 2.0.1 keeps the canonical 2.0 suite intact while updating Voicizer and Visualizer to their tested 2.0.4 releases.
+Songizer Suite is a unified set of six Logic Pro music tools for shaping, understanding, capturing, and visualizing performances. Version 2.0.2 keeps the canonical 2.0 suite intact while updating Repeatizer to 2.0.2 and Voicizer to 2.0.5, alongside the tested Visualizer 2.0.4 release.
 
 ![Songizer Suite workflow map](docs/images/songizer-suite-map.svg)
 
 ## Easy installation
 
-Download **`Songizer-Suite-2.0.1-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, and double-click **Install Songizer Suite.command**.
+Download **`Songizer-Suite-2.0.2-macOS.dmg`** from the [latest release](https://github.com/santismo/songizer/releases/latest), open it, and double-click **Install Songizer Suite.command**.
 
 1. Quit Logic Pro.
 2. Open the DMG.
@@ -19,9 +19,9 @@ The installer installs all six Audio Units together. Existing Songizer developme
 
 | Tool | Version | What it contributes | Logic placement |
 | --- | --- | --- | --- |
-| [Repeatizer](https://github.com/santismo/repeatizer) | 2.0.0 | Full pad and Instrument modes for repeats, patterns, chord rhythm, arpeggiation, swing, and tempo performance. | MIDI FX |
+| [Repeatizer](https://github.com/santismo/repeatizer) | 2.0.2 | Full pad and Instrument modes for repeats, patterns, chord rhythm, arpeggiation, swing, and tempo performance, with gate-safe live Tempo CC changes. | MIDI FX |
 | [Chordizer](https://github.com/santismo/chordizer) | 2.0.0 | Chord regions, scale transformation, harmonization, and register-consistent harmonic mapping. | MIDI FX |
-| [Voicizer](https://github.com/santismo/LeadVoicer) | 2.0.4 | Scale-aware voicing styles, selected-mode interchange, full piano range, and a root-independent probability-weighted Chord Bank. | MIDI FX |
+| [Voicizer](https://github.com/santismo/LeadVoicer) | 2.0.5 | Scale-aware voicing styles, selected-mode interchange, full piano range, and a root-independent probability-weighted Chord Bank. | MIDI FX |
 | [Fretizer](https://github.com/santismo/fretizer) | 2.0.0 | Guitar-fretboard visualization that preserves incoming MIDI unchanged. | MIDI FX |
 | [Midizer](https://github.com/santismo/midizer) | 2.0.0 | Transport-aware capture and export of the final processed MIDI performance. | MIDI FX, last in a capture chain |
 | [Visualizer](https://github.com/santismo/visualizer-studio) | 2.0.4 | Resizable source-native audio and MIDI visualization with named taps, repaired MIDI-only transport, per-source transforms, colors, scope trails, and history controls. | Audio FX / MIDI FX |
@@ -35,6 +35,7 @@ Detailed component placement is in [the suite contents guide](docs/SUITE-CONTENT
 ![Repeatizer interface](docs/images/plugins/repeatizer-ui.png)
 
 Repeatizer can work as a pad-based rhythm processor or in Instrument mode. Instrument mode turns held notes into timed chord patterns and arpeggios while retaining the complete repeat, style, pattern, variation, dynamics, and tempo-control system.
+Live Tempo CC changes now keep existing note gates aligned with the retimed repeat grid, preventing overlapping held notes.
 
 ### Chordizer
 
@@ -80,6 +81,6 @@ Logic routes MIDI FX in order. Each Songizer plug-in also works independently; t
 
 ## Compatibility and source
 
-Songizer Suite 2.0.1 is for macOS and Logic Pro hosts that support Audio Units and MIDI FX. The DMG contains signed Audio Unit bundles, Repeatizer's invisible AUv3 container, and a recoverable installer. Source and licensing details remain available in the linked product repositories.
+Songizer Suite 2.0.2 is for macOS and Logic Pro hosts that support Audio Units and MIDI FX. The DMG contains signed Audio Unit bundles, Repeatizer's invisible AUv3 container, and a recoverable installer. Source and licensing details remain available in the linked product repositories.
 
 The suite documentation and installer are MIT licensed. The release does not include Logic Pro, instruments, or sound content.
