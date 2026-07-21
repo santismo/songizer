@@ -2,6 +2,10 @@
 set -euo pipefail
 
 suite_dir="$(cd "$(dirname "$0")" && pwd)"
+suite_version="2.0.1"
+if [[ -f "$suite_dir/VERSION" ]]; then
+  suite_version="$(tr -d '\n' < "$suite_dir/VERSION")"
+fi
 components_dir="$HOME/Library/Audio/Plug-Ins/Components"
 archive_root="$HOME/Library/Application Support/Songizer/Development Archive/$(date +%Y%m%d-%H%M%S)"
 repeatizer_dir="$HOME/Library/Application Support/Songizer/Repeatizer"
@@ -87,7 +91,7 @@ mkdir -p "$repeatizer_dir"
 
 /usr/bin/killall -9 AudioComponentRegistrar 2>/dev/null || true
 
-print "Songizer Suite 2.0.0 installed:"
+print "Songizer Suite $suite_version installed:"
 for component in "${components[@]}"; do
   print "  ${component:r}"
 done

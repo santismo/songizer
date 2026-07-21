@@ -1,4 +1,4 @@
-Songizer Suite 2.0.0 for Logic Pro
+Songizer Suite 2.0.1 for Logic Pro
 
 1. Quit Logic Pro.
 2. Double-click “Install Songizer Suite.command”.
@@ -10,7 +10,7 @@ The installer places the five component Audio Units in:
 Repeatizer is an Audio Unit v3 plug-in. Its required invisible host is installed in:
 ~/Library/Application Support/Songizer/Repeatizer
 
-The six included tools are Chordizer, Fretizer, Midizer, Repeatizer, Visualizer, and Voicizer.
+The six included tools are Chordizer, Fretizer, Midizer, Repeatizer, Visualizer 2.0.4, and Voicizer 2.0.4.
 
 Previous and development copies of these plug-ins are preserved in a timestamped folder at:
 ~/Library/Application Support/Songizer/Development Archive
